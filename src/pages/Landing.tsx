@@ -60,7 +60,7 @@ export const Landing:FunctionComponent = () => {
                 }
                 
                 <div className="flex justify-center">
-                    <p className="my-auto text-slate-400">Sean Preston 2022 • <a href="https://github.com/seanpreston2904">GitHub</a></p>
+                    <p className="my-auto text-slate-400">Sean Preston 2022 • <a href="https://github.com/seanpreston2904">GitHub</a> • LinkedIn</p>
                 </div>
 
             </div>
