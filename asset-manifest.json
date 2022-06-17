@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/BarBuddy/static/css/main.8d80052a.css",
+    "main.js": "/BarBuddy/static/js/main.db9d6c46.js",
+    "static/js/787.1c0343c4.chunk.js": "/BarBuddy/static/js/787.1c0343c4.chunk.js",
+    "index.html": "/BarBuddy/index.html",
+    "main.8d80052a.css.map": "/BarBuddy/static/css/main.8d80052a.css.map",
+    "main.db9d6c46.js.map": "/BarBuddy/static/js/main.db9d6c46.js.map",
+    "787.1c0343c4.chunk.js.map": "/BarBuddy/static/js/787.1c0343c4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8d80052a.css",
+    "static/js/main.db9d6c46.js"
+  ]
+}
