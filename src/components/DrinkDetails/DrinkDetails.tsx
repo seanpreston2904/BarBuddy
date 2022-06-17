@@ -37,7 +37,7 @@ export const DrinkDetails: React.FC = () => {
     
     if(status === 'loading'){ 
         return (
-            <div className="flex h-screen">
+            <div className="flex h-screen mx-auto">
                 <svg width="38" height="38" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" className=" my-auto">
                     {/*By Sam Herbert (@sherb), for everyone. More @ http://goo.gl/7AJzbL*/}
                     <defs>
@@ -82,7 +82,7 @@ export const DrinkDetails: React.FC = () => {
         <AnimatePresence>
             
             <div className="flex flex-col space-y-3 p-4">
-                <button className="w-full bg-slate-100 rounded-lg p-4 text-slate-700 font-semibold flex align-middle" onClick={() => {navigate("/"); remove();}}>← Return to Drinks</button>
+                <button className="md:w-[50rem] w-full mx-auto bg-slate-100 rounded-lg p-4 text-slate-700 font-semibold flex align-middle" onClick={() => {navigate("/"); remove();}}>← Return to Drinks</button>
                 {
                     status === 'success' &&
                     <motion.div 

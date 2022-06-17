@@ -1,5 +1,6 @@
 import { FunctionComponent, useState } from "react";
 import { CupStraw } from "react-bootstrap-icons";
+import { Footer } from "../components/Footer";
 import { SearchResult } from "../components/SearchResult";
 import { queryDrinks } from "../services/QueryDrinks";
 
@@ -56,9 +57,7 @@ export const Landing:FunctionComponent = () => {
                     </div>
                 }
                 
-                <div className="flex justify-center">
-                    <p className="my-auto text-slate-400">Sean Preston 2022 • <a href="https://github.com/seanpreston2904">GitHub</a> • <a href="https://www.linkedin.com/in/sean-preston-2904/">LinkedIn</a></p>
-                </div>
+                <Footer/>
 
             </div>
         </div>
