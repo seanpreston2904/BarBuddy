@@ -19,13 +19,16 @@ export const Landing:FunctionComponent = () => {
                     <h1 className="text-3xl font-bold text-slate-700 flex">BarBuddy<CupStraw className="text-slate-700"/></h1>
                     
                     <input 
-                        type={"text"} 
+                        type="text"
                         className="bg-slate-100 p-2 rounded-md w-4/5 md:w-96 text-center focus:drop-shadow-lg outline-none text-slate-700" 
                         placeholder="Look for a drink..."
                         onChange={e => setSearchQuery(e.target.value)}
-                        onKeyUp={
+                        onKeyDown={
                             (e) => {
                                 if(e.key === "Enter" && searchQuery !== ""){
+
+                                    (e.target as HTMLElement).blur();
+
                                     queryDrinks(searchQuery)
                                         .then(response => setDrinks(response.drinks))
                                         .then(() => {setSearched(true); setLastSearch(searchQuery)});
