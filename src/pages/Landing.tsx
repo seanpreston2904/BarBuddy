@@ -1,3 +1,4 @@
+import { motion, Variants } from "framer-motion";
 import { FunctionComponent, useState } from "react";
 import { CupStraw } from "react-bootstrap-icons";
 import { Footer } from "../components/Footer";
@@ -14,7 +15,7 @@ export const Landing:FunctionComponent = () => {
     return(
         <div className="flex h-screen justify-center">
             <div className="flex flex-col w-screen justify-center space-y-4">
-                <div className="flex flex-col justify-center items-center text-center space-y-4">
+                <div className="mt-4 flex flex-col justify-center items-center text-center space-y-4">
                     <h1 className="text-3xl font-bold text-slate-700 flex">BarBuddy<CupStraw className="text-slate-700"/></h1>
                     
                     <input 
@@ -46,18 +47,23 @@ export const Landing:FunctionComponent = () => {
 
                 {
                     searched && drinks !== null &&
-                    <div className="max-h-[34rem] mx-auto p-2 space-y-2 overflow-auto" id="search_results">
+                    <div className="flex flex-col flex-grow mx-auto p-2 space-y-2 overflow-auto" id="search_results">
 
                         {
                             drinks.map(
-                                drink => <SearchResult id={drink["idDrink"]} imgUrl={drink["strDrinkThumb"]} name={drink["strDrink"]} />
+                                drink => <div>
+                                            <SearchResult id={drink["idDrink"]} imgUrl={drink["strDrinkThumb"]} name={drink["strDrink"]} />
+                                        </div>
                             )
                         }
 
                     </div>
                 }
                 
-                <Footer/>
+                <div className="mb-4">
+                    <Footer/>
+                </div>
+                
 
             </div>
         </div>
