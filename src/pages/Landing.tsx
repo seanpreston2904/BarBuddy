@@ -1,4 +1,3 @@
-import { AnimateSharedLayout, motion, MotionConfig } from "framer-motion";
 import { FunctionComponent, useState } from "react";
 import { CupStraw } from "react-bootstrap-icons";
 import { SearchResult } from "../components/SearchResult";
@@ -10,7 +9,6 @@ export const Landing:FunctionComponent = () => {
     const [searchQuery, setSearchQuery] = useState("");
     const [lastSearch, setLastSearch] = useState("");
     const [drinks, setDrinks] = useState([]);
-    const [loading, setLoading] = useState(false);
 
     return(
         <div className="flex h-screen justify-center">
@@ -26,10 +24,9 @@ export const Landing:FunctionComponent = () => {
                         onKeyUp={
                             (e) => {
                                 if(e.key === "Enter" && searchQuery !== ""){
-                                    setLoading(true);
                                     queryDrinks(searchQuery)
                                         .then(response => setDrinks(response.drinks))
-                                        .then(() => {setSearched(true); setLoading(false); setLastSearch(searchQuery)});
+                                        .then(() => {setSearched(true); setLastSearch(searchQuery)});
                                 
                                 }
                             }

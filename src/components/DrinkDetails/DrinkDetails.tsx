@@ -1,11 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { FunctionComponent } from "react";
-import { ArrowLeft } from "react-bootstrap-icons";
 import { useQuery } from "react-query";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { getSystemErrorMap } from "util";
-
-import LoadingSpinner from '../../assets/img/tail-spin.svg';
 
 const getIngredients = (data: any) => {
 
@@ -24,7 +19,7 @@ const getIngredients = (data: any) => {
 export const DrinkDetails: React.FC = () => {
 
     //Extract drink ID from url params.
-    const [searchParams, setSearchParams] = useSearchParams();
+    const [searchParams] = useSearchParams();
     let drinkId: string = searchParams.get("drinkId") || "";
 
     const navigate = useNavigate();
@@ -102,7 +97,7 @@ export const DrinkDetails: React.FC = () => {
                 >
                     
                     <div className="container relative">
-                        <img src={data["drinks"][0]["strDrinkThumb"]} className="w-full h-[24rem] object-center object-cover rounded-t-lg" />
+                        <img src={data["drinks"][0]["strDrinkThumb"]} className="w-full h-[24rem] object-center object-cover rounded-t-lg" alt="thumb"/>
                         <div className="w-full h-[4rem] backdrop-blur-md absolute bottom-0 flex bg-slate-600/50">
                             <h3 className="text-slate-100 my-auto ml-4 text-2xl font-semibold">{data["drinks"][0]["strDrink"]}</h3>
                         </div>
