@@ -41,7 +41,7 @@ export const Landing:FunctionComponent = () => {
                     drinks === null &&
                     <div className="text-center">
 
-                        <p className="mx-auto font-semibold text-slate-500">Sorry, We couldn't find anything for "{lastSearch}"</p>
+                        <p className="mx-auto font-semibold text-slate-500">Sorry! We couldn't find anything for "{lastSearch}"</p>
 
                     </div>
                 }
