@@ -1,4 +1,3 @@
-import { motion, Variants } from "framer-motion";
 import { FunctionComponent, useState } from "react";
 import { CupStraw } from "react-bootstrap-icons";
 import { Footer } from "../components/Footer";
