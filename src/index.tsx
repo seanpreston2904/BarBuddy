@@ -9,6 +9,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <App />
   </React.StrictMode>
 );
