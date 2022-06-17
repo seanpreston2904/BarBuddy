@@ -81,7 +81,7 @@ export const DrinkDetails: React.FC = () => {
     return(
         <AnimatePresence>
             
-            <div className="flex flex-col space-y-3 md:mt-[20vh] p-4">
+            <div className="flex flex-col space-y-3 p-4">
                 <button className="w-full bg-slate-100 rounded-lg p-4 text-slate-700 font-semibold flex align-middle" onClick={() => {navigate("/"); remove();}}>← Return to Drinks</button>
                 {
                     status === 'success' &&
